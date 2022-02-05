@@ -25,7 +25,7 @@ import {otfToTtf, ttfToWoff, fontsStyle} from './gulp/tasks/fonts.js'
 // Наблюдатель за изменениями в файлах
 function watcher() {
     gulp.watch(path.watch.files, copy)
-    gulp.watch(path.watch.html, copy)
+    gulp.watch(path.watch.html, html)
     gulp.watch(path.watch.scss, scss)
     gulp.watch(path.watch.js, js)
     gulp.watch(path.watch.images, images)
