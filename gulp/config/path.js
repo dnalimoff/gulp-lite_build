@@ -9,21 +9,23 @@ export const path = {
         js: `${buildFolder}/js/`,
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
-        images: `${buildFolder}/img/`,
+        images: `${buildFolder}/img`,
         fonts: `${buildFolder}/fonts/`,
-        files: `${buildFolder}/files/`
+        files: `${buildFolder}/files/`,
+        fonts: `${buildFolder}/fonts/`
     },
     src: {
         js: `${srcFolder}/js/app.js`,
-        images: `${srcFolder}/img/**/*.{jpg, jpeg, png, gif, webp, svg}`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
         svg: `${srcFolder}/img/**/*.svg`,
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
-        files: `${srcFolder}/files/**/*.*`
+        files: `${srcFolder}/files/**/*.*`,
+        fonts: `${srcFolder}/fonts/**/*.*`
     },
     watch: {
         js: `${srcFolder}/js/**/*.js`,
-        images: `${srcFolder}/img/**/*.{jpg, jpeg, png, gif, webp, svg, ico}`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
         scss: `${srcFolder}/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
         files: `${srcFolder}/files/**/*.*`
