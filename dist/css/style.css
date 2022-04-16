@@ -1,0 +1,132 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-gothampro);
+  font-size: var(--size-normal);
+  line-height: 1.2;
+  color: var(--color-black);
+  font-weight: var(--font-regular);
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.modal-open {
+  overflow: hidden;
+  background-color: var(--color-dark-gray);
+}
+
+.container {
+  max-width: 1218px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro/GothamPro.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro/GothamPro-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro/GothamPro-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --font-gothampro: "GothamPro", sans-serif;
+  --color-orange: #FF8401;
+  --color-black: #2E2B2B;
+  --color-dark-gray: #4F4F4F;
+  --color-gray: #E0E0E0;
+  --color-gray-light: #F2F2F2;
+  --color-light: #F9FAFA;
+  --color-white: #FFFFFF;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --size-biggest: 4.312rem;
+  --size-big: 3.438rem;
+  --size-subtitle: 2.750rem;
+  --size-subtitle-medium: 2.188rem;
+  --size-subtitle-small: 1.750rem;
+  --size-normal-big: 1.438rem;
+  --size-normal-20: 1.25rem;
+  --size-normal: 1.125rem;
+  --size-normal-small: 0.875rem;
+  --size-small: 0.750rem;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --size-big: 2.750rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --size-normal-big: 1.25rem;
+    --size-big: 2.188rem;
+    --size-subtitle: 2.5rem;
+    --size-subtitle-medium: 1.875rem;
+    --size-subtitle-small: 1.438rem;
+    --size-normal-20: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  :root {
+    --size-subtitle: 2.188rem;
+    --size-subtitle-medium: 1.750rem;
+  }
+}

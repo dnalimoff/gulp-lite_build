@@ -1,4 +1,4 @@
-// import webpack from 'webpack-stream'
+import webpack from 'webpack-stream'
 
 export const js = () => {
     return (
@@ -13,14 +13,14 @@ export const js = () => {
                 )
             )
             // для использования модульности
-            // .pipe(
-            //     webpack({
-            //         mode: 'development',
-            //         output: {
-            //             filename: 'app.min.js'
-            //         }
-            //     })
-            // )
+            .pipe(
+                webpack({
+                    mode: 'development',
+                    output: {
+                        filename: 'app.min.js'
+                    }
+                })
+            )
             .pipe(app.gulp.dest(app.path.build.js))
             .pipe(app.plugins.browserSync.stream())
     )
