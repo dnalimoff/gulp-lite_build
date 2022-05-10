@@ -1,9 +1,9 @@
 import webpack from 'webpack-stream'
-
+// 
 export const js = () => {
     return (
         app.gulp
-            .src(app.path.src.js, {sourcemap: true})
+            .src(app.path.src.js, {sourcemap: app.isDev})
             .pipe(
                 app.plugins.plumber(
                     app.plugins.notify.onError({
@@ -15,7 +15,7 @@ export const js = () => {
             // для использования модульности
             .pipe(
                 webpack({
-                    mode: 'development',
+                    mode: app.isBuild ? 'production' : 'development',
                     output: {
                         filename: 'app.min.js'
                     }
@@ -23,5 +23,5 @@ export const js = () => {
             )
             .pipe(app.gulp.dest(app.path.build.js))
             .pipe(app.plugins.browserSync.stream())
-    )
+    );
 }

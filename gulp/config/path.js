@@ -21,18 +21,20 @@ export const path = {
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`,
-        fonts: `${srcFolder}/fonts/**/*.*`
+        fonts: `${srcFolder}/fonts/**/*.*`,
+        svgicons: `${srcFolder}/img/icons/*.svg`
     },
     watch: {
         js: `${srcFolder}/js/**/*.js`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
         scss: `${srcFolder}/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
-        files: `${srcFolder}/files/**/*.*`
+        files: `${srcFolder}/files/**/*.*`,
+        svgicons: `${srcFolder}/icons/*.svg`
     },
     clean: buildFolder,
     buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
     ftp: ``
-}
+};
